@@ -54,11 +54,11 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed top-4 left-4 right-4 z-50"
+      className="fixed top-2 md:top-4 left-2 md:left-4 right-2 md:right-4 z-50"
     >
       {/* Navbar background with glassmorphism */}
       <div 
-        className={`backdrop-blur-md bg-white/80 border-2 border-gray-200/60 rounded-full transition-all duration-300 ${
+        className={`backdrop-blur-md bg-white/80 border-2 border-gray-200/60 rounded-2xl md:rounded-full transition-all duration-300 ${
           scrollY > 20 ? 'shadow-xl' : 'shadow-lg'
         }`}
       >
@@ -168,16 +168,16 @@ const Navbar = () => {
           }
         `}</style>
 
-        <div className="max-w-7xl mx-auto px-3 lg:px-5 py-1.5 lg:py-0">
-          <div className="flex justify-between items-center h-16">
+        <div className="max-w-7xl mx-auto px-2 md:px-5 py-1 md:py-1.5">
+          <div className="flex justify-between items-center h-14 md:h-16">
             {/* Logo */}
             <motion.div 
-              className="flex items-center"
+              className="flex items-center flex-shrink-0"
               whileHover={{ scale: 1.05 }}
             >
               <button
                 onClick={() => scrollToSection('home')}
-                className="logo-btn text-xl font-bold text-teal-800 hover:text-teal-700 transition-colors flex items-center gap-1 focus:outline-none border-2 border-teal-800 px-2.5 py-1 rounded-lg hover:border-teal-700"
+                className="logo-btn text-sm md:text-xl font-bold text-teal-800 hover:text-teal-700 transition-colors flex items-center gap-1 focus:outline-none border-2 border-teal-800 px-2 md:px-2.5 py-1 rounded-lg hover:border-teal-700"
               >
                 BK
               </button>
@@ -199,7 +199,7 @@ const Navbar = () => {
             </div>
 
             {/* CTA Button & Mobile Menu */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 md:gap-3">
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
@@ -244,7 +244,7 @@ const Navbar = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="mobile-menu lg:hidden pb-5 border-t border-gray-100"
+              className="mobile-menu lg:hidden pb-3 md:pb-5 border-t border-gray-100"
             >
               {navItems.map((item, idx) => (
                 <motion.button
@@ -253,18 +253,18 @@ const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.05 }}
                   onClick={() => scrollToSection(item.id)}
-                  className={`mobile-nav-item block w-full text-left px-3 py-1.5 text-gray-700 hover:text-teal-800 hover:bg-teal-50/50 transition-all text-xs font-semibold ${
+                  className={`mobile-nav-item block w-full text-left px-3 py-2 md:py-2.5 text-gray-700 hover:text-teal-800 hover:bg-teal-50/50 transition-all text-xs md:text-sm font-semibold ${
                     activeSection === item.id ? 'text-teal-800 bg-teal-50' : ''
                   }`}
                 >
                   {item.label}
                 </motion.button>
               ))}
-              <div className="px-3 py-2 mt-1.5">
+              <div className="px-3 py-2 md:py-2.5 mt-1 md:mt-2">
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   onClick={() => scrollToSection('contact')}
-                  className="cta-button w-full px-5 py-1.5 bg-gradient-to-r from-teal-700 to-teal-800 text-white rounded-full hover:bg-teal-800 transition-all text-xs font-bold focus:outline-none flex items-center justify-center gap-1.5 shadow-md"
+                  className="cta-button w-full px-5 py-2 md:py-2.5 bg-gradient-to-r from-teal-700 to-teal-800 text-white rounded-full hover:bg-teal-800 transition-all text-xs md:text-sm font-bold focus:outline-none flex items-center justify-center gap-1.5 shadow-md"
                 >
                   <i className="fas fa-download"></i>
                     Resume
