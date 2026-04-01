@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const Navbar = () => {
@@ -185,16 +185,21 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-5">
-              {navItems.map((item) => (
-                <button
+              {navItems.map((item, idx) => (
+                <motion.button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: idx * 0.08 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   className={`nav-item text-gray-700 text-xs font-semibold hover:text-teal-800 focus:outline-none transition-colors ${
                     activeSection === item.id ? 'active text-teal-800' : ''
                   }`}
                 >
                   {item.label}
-                </button>
+                </motion.button>
               ))}
             </div>
 
