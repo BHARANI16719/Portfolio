@@ -207,7 +207,7 @@ const Navbar = () => {
                 className="cta-button hidden lg:flex px-5 py-1.5 bg-gradient-to-r from-teal-700 to-teal-800 text-white rounded-full hover:bg-teal-800 transition-all text-xs font-bold focus:outline-none items-center gap-1.5 shadow-md"
               >
                 <i className="fas fa-download text-xs"></i>
-                CV
+                Resume
               </motion.button>
 
               {/* Mobile Menu Button */}
@@ -267,7 +267,7 @@ const Navbar = () => {
                   className="cta-button w-full px-5 py-1.5 bg-gradient-to-r from-teal-700 to-teal-800 text-white rounded-full hover:bg-teal-800 transition-all text-xs font-bold focus:outline-none flex items-center justify-center gap-1.5 shadow-md"
                 >
                   <i className="fas fa-download"></i>
-                  CV
+                    Resume
                 </motion.button>
               </div>
             </motion.div>

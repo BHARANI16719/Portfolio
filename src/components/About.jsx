@@ -199,7 +199,7 @@ const About = () => {
               whileTap={{ scale: 0.95 }}
             >
               <i className="fas fa-download"></i>
-              <span>Download My CV</span>
+              <span>Download My Resume</span>
               <motion.div 
                 className="absolute inset-0 bg-gradient-to-r from-teal-600 to-teal-700 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity"
               ></motion.div>
