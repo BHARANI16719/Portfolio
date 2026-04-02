@@ -148,7 +148,7 @@ const Leadership = () => {
             { icon: 'fas fa-trophy', label: 'Leadership Roles', value: '2' },
             { icon: 'fas fa-handshake', label: 'Community Impact', value: 'Strong' },
             { icon: 'fas fa-star', label: 'Event Management', value: 'Active' },
-            { icon: 'fas fa-users-alt', label: 'Team Coordination', value: 'Expert' },
+            { icon: 'fas fa-users', label: 'Team Coordination', value: 'Expert' },
           ].map((stat, idx) => (
             <motion.div
               key={idx}
