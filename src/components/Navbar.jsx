@@ -15,6 +15,15 @@ const Navbar = () => {
     }
   };
 
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/BharaniK.pdf';
+    link.download = 'BharaniK.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   // Track active section and scroll position
   useEffect(() => {
     const handleScroll = () => {
@@ -208,7 +217,7 @@ const Navbar = () => {
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection('contact')}
+                onClick={downloadResume}
                 className="cta-button hidden lg:flex px-5 py-1.5 bg-gradient-to-r from-teal-700 to-teal-800 text-white rounded-full hover:bg-teal-800 transition-all text-xs font-bold focus:outline-none items-center gap-1.5 shadow-md"
               >
                 <i className="fas fa-download text-xs"></i>
@@ -268,7 +277,7 @@ const Navbar = () => {
               <div className="px-3 py-2 md:py-2.5 mt-1 md:mt-2">
                 <motion.button
                   whileHover={{ scale: 1.02 }}
-                  onClick={() => scrollToSection('contact')}
+                  onClick={downloadResume}
                   className="cta-button w-full px-5 py-2 md:py-2.5 bg-gradient-to-r from-teal-700 to-teal-800 text-white rounded-full hover:bg-teal-800 transition-all text-xs md:text-sm font-bold focus:outline-none flex items-center justify-center gap-1.5 shadow-md"
                 >
                   <i className="fas fa-download"></i>
